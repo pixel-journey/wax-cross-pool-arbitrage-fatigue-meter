@@ -1,0 +1,20 @@
+name: wax-cross-pool-arbitrage-fatigue-meter
+trust_label: educational-reference
+version: 0.1.0
+purpose: >
+  Report the wait left in a gap the caller chose.
+invariants:
+  - src/cool.ts performs no network or wallet calls.
+  - Requests in src/usecases.ts set executed to false.
+  - No use case contains a transaction.
+do_not:
+  - Do not add a live client and keep this trust label.
+entrypoints:
+  logic: src/cool.ts
+  tests: src/cool.test.ts
+  demo: src/Demo.tsx
+commands:
+  test: npm test
+live_data:
+  status: untested
+  notes: No endpoint was called.
